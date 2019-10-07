@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Números</title>
+</head>
+<body>
+    
+    <script>
+
+        // Enteros
+        var edad = 31
+        edad += 1
+        console.log(`Mi edad es: ${edad} años`);
+
+        var peso = 70
+        peso -= 3
+        console.log(`Mi peso actual es: ${peso} kg.`);
+
+
+        // Decimales
+        var botellaVino = 200.3
+        console.log(`Precio actual de una botella de vino: U$ ${botellaVino}`)
+
+        var cantidadCompra = Math.round(botellaVino * 100 * 3) / 100;
+        console.log(`Tus 3 botellas de vino, valen: ${cantidadCompra}`);
+
+        var cantidadCompra_2 = cantidadCompra.toFixed(3);
+        var cantidadCompra_toNumber = parseFloat(cantidadCompra_2);
+        console.log(`${cantidadCompra_toNumber}`);
+
+    </script>
+
+</body>
+</html>

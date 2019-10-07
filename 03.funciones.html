@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+</head>
+<body>
+    
+    <script>
+
+        var nombre = 'Keven'
+        var edad = 31
+
+        function imprimirDatos(){
+            console.log(`Hola, mi nombre es: ${nombre} y  tengo ${edad} años`);
+        }
+
+        imprimirDatos();
+
+        function imprimirDatosUsuarios(name, age){
+            console.log(`Hola mi nombre es: ${name} y tu edad es ${age}`)
+        }
+
+        imprimirDatosUsuarios('Jazmin', 30);
+        imprimirDatosUsuarios('Sebastian', 25);
+        imprimirDatosUsuarios('Pilar', 55);
+        imprimirDatosUsuarios('Mauricio', 57);
+        imprimirDatosUsuarios('Melany', 35);
+
+        // Alcance de las funciones
+
+        var nombreGlobal = 'Keven Chaparro';
+
+        // JS permite pasar por parametros nombres de variables iguales a las globales, pero el alcance de estos solo será local, o sea dentro de la función y el valor de la variables global no se verá afectado o modificado.
+
+        function nombreMayusculas(name){
+            name = name.toUpperCase();
+            console.log(name)
+        }
+
+        nombreMayusculas(nombreGlobal);
+        nombreMayusculas('Pilar Benavides');
+
+    </script>
+
+</body>
+</html>

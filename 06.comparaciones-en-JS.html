@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comparaciones</title>
+</head>
+<body>
+    
+    <script>
+
+        // Comparación variables
+        var x = 4, y = '4';
+        console.log(x)
+        console.log(y)
+
+        console.log(`x == y: ${ x == y }`)
+        console.log(`x === y: ${ x === y }`)
+
+        // Comparación de objetos
+        var keven = {
+            nombre: 'Keven'
+        }
+
+        var otraPersona = {
+            nombre: 'Keven'
+        }
+
+        var otroKeven = keven;
+
+        console.log(keven.nombre);
+        console.log(otraPersona.nombre);
+        console.log(otroKeven.nombre);
+
+        console.log(`keven == otraPersona: ${ keven == otraPersona }`)
+        console.log(`keven === otraPersona: ${ keven === otraPersona }`)
+
+        console.log(`keven == otroKeven: ${ keven == otroKeven }`)
+        console.log(`keven === otroKeven: ${ keven === otroKeven }`)
+
+    </script>
+
+</body>
+</html>

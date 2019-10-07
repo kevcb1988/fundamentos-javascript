@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos</title>
+</head>
+<body>
+    
+    <script>
+
+        // Objetos: Compuestos por claves: valor y separados por ","
+
+        var keven = {
+            nombre: 'Keven',
+            apellido: 'Chaparro',
+            edad: 31
+        }
+
+        var jazmin = {
+            nombre: 'Jazmin',
+            apellido: 'Erazo',
+            edad: 30
+        }
+
+        // Forma 1
+        /*function nombreMayusculas(persona){
+            persona = persona.nombre.toUpperCase();
+            console.log(persona)
+        }*/
+
+        // Forma 2
+        /*function nombreMayusculas(persona){            
+            console.log(persona.nombre.toUpperCase())
+        }*/
+
+        // Forma actual: Desglosar el objeto y pasarlos por parámetros
+        function nombreMayusculas({ nombre }){
+            persona = `${nombre.toUpperCase()}`;
+            console.log(persona)
+        }
+
+        nombreMayusculas(keven);
+        nombreMayusculas(jazmin);
+        nombreMayusculas({ nombre: 'Mauricio' })
+
+    </script>
+
+</body>
+</html>

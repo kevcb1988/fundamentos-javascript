@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variables & Strings</title>
+</head>
+<body>
+    
+    <script>
+
+        var nombre = 'Keven'
+        var apellido = 'Chaparro'
+        var nombreCompleto = `${nombre} ${apellido}`
+        console.log(nombreCompleto);
+
+        // Transformar un string en altas y bajas
+        var nombreMayusculas = nombreCompleto.toUpperCase();
+        var nombreMinusculas = nombreCompleto.toLocaleLowerCase();
+        console.log(`Nombre en altas: ${nombreMayusculas}`);
+        console.log(`Nombre en bajas: ${nombreMinusculas}`);
+
+        // Obtener la primera letar de un string "charAt(indice)"
+        var primeraLetra = nombre.charAt(nombre).toLowerCase();
+        console.log(primeraLetra);
+
+        // Cantidad de caracteres en un string, use el - 1 para restar el espacio entre nombre y apellido
+        var cantidadLetras = nombreCompleto.length - 1;
+        console.log(`Tu nombre contiene: ${cantidadLetras} caracteres`);
+
+        // Para tomar una cantidad de caracteres se usa substr(indiceIncial, indiceFinal);
+        var caracteres = nombre.substr(2,8)
+        console.log(`Caracteres seleccionados de tu nombre: ${caracteres}`);
+
+        // Última letra de un string
+        var apellido = 'Chaparro'
+        var ultimaLetra = apellido.charAt(apellido.length - 1);
+        console.log(`Última letra de tu apellido; ${ultimaLetra}`);
+
+    </script>
+
+</body>
+</html>

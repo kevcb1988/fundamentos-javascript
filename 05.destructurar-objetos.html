@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos</title>
+</head>
+<body>
+    
+    <script>
+
+        // Objetos: Compuestos por claves: valor y separados por ","
+
+        var keven = {
+            nombre: 'Keven',
+            apellido: 'Chaparro',
+            edad: 31
+        }
+
+        var jazmin = {
+            nombre: 'Jazmin',
+            apellido: 'Erazo',
+            edad: 30
+        }
+
+        function imprimirNombre(persona){
+            var {nombre} = persona;
+            console.log(nombre);
+        }
+
+        imprimirNombre(keven);
+        imprimirNombre(jazmin)
+
+        function saludar(persona){
+            var {nombre, edad} = persona;
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad}`);
+        }
+
+        saludar(jazmin);
+        saludar(keven);
+
+        // Parámetros como referencia o como valor
+
+        // Para evitar que se modifique el objeto teniendo en cuenta lo que estamos psando por parámetro podemos desglosar el objeto y crear uno nuevo con la caraterística que deseamos modificar
+
+        function happyBirthday(persona){
+            return{
+                ...persona,
+                edad: persona.edad += 1
+            }
+        }
+
+        console.log(keven.edad);
+        
+        var kevenOld = happyBirthday(keven);
+        console.log(kevenOld.edad);
+
+    </script>
+
+</body>
+</html>
